@@ -1,0 +1,54 @@
+name: muday
+description: "Expense Tracker For Ethiopian Banks and Finanical Wallets"
+
+# Prevent accidental publishing to pub.dev.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  http: ^1.2.2
+  url_launcher: ^6.3.1 # to be removed
+  sqflite: ^2.4.1
+  path: 1.9.0
+  uuid: ^4.4.2
+
+  # for reading sms 
+  flutter_sms_inbox: ^1.0.3
+  permission_handler: ^10.2.0
+  syncfusion_flutter_pdf: ^28.1.35
+  dio: ^5.7.0
+
+  # for background tasks
+  flutter_background_service: ^5.1.0
+
+# DEV DEPENDENCIES
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+  sqflite_common_ffi: any
+  
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
+  
+
+
+flutter:
+  uses-material-design: true
+  # Enable generation of localized Strings from arb files.
+  generate: true
+
+  assets:
+    # Add assets from the images directory to the application.
+    - assets/images/
