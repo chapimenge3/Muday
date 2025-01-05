@@ -1,0 +1,200 @@
+{
+    "repository": "muday-expense-tracker",
+    "description": "Ethiopian expense tracking app with SMS parsing capabilities",
+    "labels": {
+      "feature": "2da44e",
+      "bug": "d73a4a",
+      "enhancement": "a2eeef",
+      "documentation": "0075ca",
+      "high-priority": "b60205",
+      "medium-priority": "fbca04",
+      "low-priority": "0e8a16"
+    },
+    "milestones": [
+      {
+        "title": "Core SMS Parsing Framework",
+        "description": "Implement basic SMS parsing functionality for different banks",
+        "issues": [
+          {
+            "title": "Implement SMS Listener Service",
+            "description": "Create background service to listen for incoming SMS from specified senders",
+            "labels": ["feature", "high-priority"],
+            "tasks": [
+              "Set up SMS permission handling",
+              "Create SMS receiver broadcast",
+              "Implement sender filtering logic",
+              "Add background service registration"
+            ]
+          },
+          {
+            "title": "Create Bank SMS Parser Interface",
+            "description": "Design and implement generic parser interface for different banks",
+            "labels": ["feature", "high-priority"],
+            "tasks": [
+              "Define parser interface",
+              "Create abstract bank parser class",
+              "Implement regex pattern management",
+              "Add field extraction utilities"
+            ]
+          },
+          {
+            "title": "Implement Telebirr SMS Parser",
+            "description": "Parse Telebirr SMS messages with all required fields",
+            "labels": ["feature", "high-priority"],
+            "tasks": [
+              "Parse balance",
+              "Extract transaction date",
+              "Parse transaction amount",
+              "Extract reference number",
+              "Parse receiver details",
+              "Handle commission and VAT",
+              "Extract transaction ID",
+              "Parse payment details"
+            ]
+          },
+          {
+            "title": "Implement CBE SMS Parser",
+            "description": "Parse Commercial Bank of Ethiopia SMS messages",
+            "labels": ["feature", "high-priority"]
+          },
+          {
+            "title": "Implement Abyssinia Bank Parser",
+            "description": "Parse Bank of Abyssinia SMS messages",
+            "labels": ["feature", "medium-priority"]
+          }
+        ]
+      },
+      {
+        "title": "Data Management",
+        "description": "Database design and implementation for storing parsed transactions",
+        "issues": [
+          {
+            "title": "Design Database Schema",
+            "description": "Create database schema for transactions and categories",
+            "labels": ["feature", "high-priority"],
+            "tasks": [
+              "Design transaction table",
+              "Design category table",
+              "Design budget table",
+              "Create database migration scripts"
+            ]
+          },
+          {
+            "title": "Implement Local Database Operations",
+            "description": "Create repository layer for local data operations",
+            "labels": ["feature", "high-priority"]
+          },
+          {
+            "title": "Implement Cloud Sync",
+            "description": "Setup Firebase integration and cloud sync functionality",
+            "labels": ["feature", "medium-priority"],
+            "tasks": [
+              "Setup Firebase configuration",
+              "Implement user authentication",
+              "Create cloud data structure",
+              "Implement sync logic",
+              "Handle conflict resolution"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Transaction Processing",
+        "description": "Advanced transaction processing features",
+        "issues": [
+          {
+            "title": "Implement PDF Invoice Parser",
+            "description": "Parse transaction invoices from PDF files",
+            "labels": ["feature", "medium-priority"],
+            "tasks": [
+              "Implement PDF text extraction",
+              "Create invoice field parser",
+              "Match invoices with transactions",
+              "Handle different invoice formats"
+            ]
+          },
+          {
+            "title": "Implement AI-based Categorization",
+            "description": "Integration with Gemini AI for transaction categorization",
+            "labels": ["feature", "high-priority"],
+            "tasks": [
+              "Setup Gemini AI integration",
+              "Implement categorization logic",
+              "Create custom category management",
+              "Add category override functionality",
+              "Implement AI provider switching"
+            ]
+          },
+          {
+            "title": "Manual Transaction Management",
+            "description": "Allow users to manually add and edit transactions",
+            "labels": ["feature", "medium-priority"]
+          }
+        ]
+      },
+      {
+        "title": "Budget Management",
+        "description": "Budget setting and tracking features",
+        "issues": [
+          {
+            "title": "Implement Budget Settings",
+            "description": "Allow users to set and manage budgets",
+            "labels": ["feature", "high-priority"],
+            "tasks": [
+              "Create daily budget setting",
+              "Implement weekly budget",
+              "Add monthly budget tracking",
+              "Create yearly budget planning",
+              "Add budget notification system"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Analytics and Reporting",
+        "description": "Data visualization and reporting features",
+        "issues": [
+          {
+            "title": "Implement Transaction Analytics",
+            "description": "Create graphical representations of transaction data",
+            "labels": ["feature", "high-priority"],
+            "tasks": [
+              "Implement date-based filtering",
+              "Create category-based analysis",
+              "Add custom date range support",
+              "Create trend analysis charts"
+            ]
+          },
+          {
+            "title": "Export/Import Functionality",
+            "description": "Implement data export and import features",
+            "labels": ["feature", "medium-priority"],
+            "tasks": [
+              "Implement CSV export",
+              "Add JSON export",
+              "Create PDF report generation",
+              "Implement CSV import validation",
+              "Add import data mapping"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Social Features",
+        "description": "Implement user sharing and social features",
+        "issues": [
+          {
+            "title": "Transaction Sharing",
+            "description": "Allow users to share transactions with other app users",
+            "labels": ["feature", "low-priority"],
+            "tasks": [
+              "Implement share functionality",
+              "Create transaction view permissions",
+              "Add user search/selection",
+              "Implement share notifications"
+            ]
+          }
+        ]
+      }
+    ]
+  } 
